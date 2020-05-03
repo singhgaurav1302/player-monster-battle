@@ -1,4 +1,4 @@
-# player-monster-battle
+# Player Monster Battle
 
 This is a game where player our hero fights two monsters.
 Two monsters continuosly attack our hero at different intervals.
