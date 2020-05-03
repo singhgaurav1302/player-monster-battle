@@ -2,7 +2,6 @@
 #define CHARACTER_H_
 
 #include <string>
-#include <atomic>
 
 class Character
 {
@@ -14,8 +13,7 @@ public:
     Character(const std::string& name, int health, int attackPower);
     virtual ~Character();
 
-    void attackOpponent(Character& opponent);
-    void reduceHealth();
+    virtual void attackOpponent(Character& opponent);
 
     bool isAlive() const;
 

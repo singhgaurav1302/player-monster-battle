@@ -1,6 +1,9 @@
 #include <iostream>
+#include <mutex>
 
 #include "Character.h"
+
+std::mutex mtx;
 
 Character::Character(const std::string& name, int health, int attackPower)
     : name_ {name}
@@ -15,6 +18,7 @@ Character::~Character()
 
 void Character::attackOpponent(Character& opponent)
 {
+    std::lock_guard<std::mutex> lock(mtx);
     opponent.health_ = std::max(0, opponent.health_ - attackPower_);
     std::cout << name_ << " hits " << opponent.getName() << ". "; 
     std::cout << opponent.getName() << " health is: " << opponent.getHealth() << std::endl;

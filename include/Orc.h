@@ -1,13 +1,12 @@
 #ifndef ORC_H_
 #define ORC_H_
 
-#include "Character.h"
-#include "TimedAttack.h"
+#include "Enemy.h"
 
-class Orc : public Character, public TimedAttack<Orc>
+class Orc : public Enemy
 {
 public:
-    Orc(int initialHealth, int attackPower, int interval, Character& opponent);
+    Orc(int initialHealth, int attackPower, int interval);
     ~Orc();
 };
 

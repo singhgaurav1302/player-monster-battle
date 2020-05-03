@@ -1,13 +1,12 @@
 #ifndef DRAGON_H_
 #define DRAGON_H_
 
-#include "Character.h"
-#include "TimedAttack.h"
+#include "Enemy.h"
 
-class Dragon : public Character, public TimedAttack<Dragon>
+class Dragon : public Enemy
 {
 public:
-    Dragon(int initialHealth, int attackPower, int interval, Character& opponent);
+    Dragon(int initialHealth, int attackPower, int interval);
     ~Dragon();
 };
 
