@@ -37,7 +37,6 @@ public:
     }
     std::vector<Character>& getPlayers();
     std::vector<Enemy>& getEnemies();
-
 };
 
 #endif //GAME_H_

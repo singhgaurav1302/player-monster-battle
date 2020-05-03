@@ -21,7 +21,7 @@ void test()
         //4 turns to kill Orc and 
         //10 turns to kill Dragon
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(2600));
         player->attackOpponent(game.getEnemyByName("Orc"));
         player->attackOpponent(game.getEnemyByName("Dragon"));
     }
@@ -39,8 +39,8 @@ void test()
 
 int main()
 {
-    test();
-    // Game game;
-    // game.init();
-    // game.play();
+    //test();
+    Game game;
+    game.init();
+    game.play();
 }
